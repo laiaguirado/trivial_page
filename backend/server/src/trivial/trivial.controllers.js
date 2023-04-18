@@ -25,8 +25,8 @@ const getTrivial = async (req, res) => {
 
 const createTrivial = async (req, res) => {
     try {
-        const { numQuestion, question, answer1, answer2, answer3, answer4 } = req.body;
-        const created = await trivial.createTrivial({ numQuestion, question, answer1, answer2, answer3, answer4 });
+        const { numQuestion, question, difficulty, category, answers } = req.body;
+        const created = await trivial.createTrivial({ numQuestion, question, difficulty, category, answers });
         res.status(201).send(created);
     } catch (e) {
         console.log(e);

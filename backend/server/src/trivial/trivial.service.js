@@ -9,8 +9,8 @@ const getTrivial = (numQuestion) => {
     return Trivial.findOne({ numQuestion }).lean().exec();
 }
 
-const createTrivial = ({ numQuestion, question, answer1, answer2, answer3, answer4 }) => {
-    return Trivial.create({ numQuestion, question, answer1, answer2, answer3, answer4 });
+const createTrivial = ({ numQuestion, question, difficulty, category, answers }) => {
+    return Trivial.create({ numQuestion, question, difficulty, category, answers });
 }
 
 module.exports = { getAllTrivial, getTrivial, createTrivial }
