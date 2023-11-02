@@ -13,16 +13,30 @@ const createTrivial = ({ numQuestion, question, difficulty, category, answers })
     return Trivial.create({ numQuestion, question, difficulty, category, answers });
 }
 
-//añadir get de una question de cada category
+const deleteTrivial = (numQuestion) => {
+    return Trivial.findOneAndDelete({ numQuestion }).lean().exec();
+}
 
-//añadir get de una question de cada difficulty
+const getAllTrivialByCategory = (category) => {
+    return Trivial.find({ category }).lean().exec();
+}
 
-//añadir get de una question con una category y difficulty
+const getAllTrivialByDifficulty = (difficulty) => {
+    return Trivial.find({ difficulty }).lean().exec();
+}
 
-//añadir get de num questions de cada category
+const getAllTrivialByCategoryAndDifficulty = (category, difficulty) => {
+    return Trivial.find({ $and: [{ category, difficulty }] }).lean().exec();
+}
 
-//añadir get de num questions de cada difficulty
+const getTrivialByCategoryWithNumLimit = (category, num) => {
+    return Trivial.find({ category }).limit(num).lean().exec();
+}
+
+const getTrivialByDifficultyWithNumLimit = (difficulty, num) => {
+    return Trivial.find({ difficulty }).limit(num).lean().exec();
+}
 
 
 
-module.exports = { getAllTrivial, getTrivial, createTrivial }
+module.exports = { getAllTrivial, getTrivial, createTrivial, deleteTrivial, getAllTrivialByCategory, getAllTrivialByDifficulty, getAllTrivialByCategoryAndDifficulty, getTrivialByDifficultyWithNumLimit, getTrivialByCategoryWithNumLimit }
