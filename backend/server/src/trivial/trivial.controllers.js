@@ -52,7 +52,7 @@ const getAllTrivialByCategory = async (req, res) => {
     try {
         const { category } = req.params;
         const result = await trivial.getAllTrivialByCategory(category);
-        res.status(200).send({ trivialByCategoryList: result });
+        res.status(200).send({ trivialList: result });
     } catch (e) {
         console.log(e);
         res.status(500).json({ error: 'Internal Server error' });
@@ -64,7 +64,7 @@ const getAllTrivialByDifficulty = async (req, res) => {
     try {
         const { difficulty } = req.params;
         const result = await trivial.getAllTrivialByDifficulty(difficulty);
-        res.status(200).send({ trivialByDifficultyList: result });
+        res.status(200).send({ trivialList: result });
     } catch (e) {
         console.log(e);
         res.status(500).json({ error: 'Internal Server error' });
@@ -76,7 +76,7 @@ const getAllTrivialByCategoryAndDifficulty = async (req, res) => {
     try {
         const { category, difficulty } = req.params;
         const result = await trivial.getAllTrivialByCategoryAndDifficulty(category, difficulty);
-        res.status(200).send({ trivialByCategoryAndDifficultyList: result });
+        res.status(200).send({ trivialList: result });
     } catch (e) {
         console.log(e);
         res.status(500).json({ error: 'Internal Server error' });
@@ -88,7 +88,7 @@ const getTrivialByCategoryWithNumLimit = async (req, res) => {
     try {
         const { category, num } = req.params;
         const result = await trivial.getTrivialByCategoryWithNumLimit(category, num);
-        res.status(200).send({ trivialByCategoryList: result });
+        res.status(200).send({ trivialList: result });
     } catch (e) {
         console.log(e);
         res.status(500).json({ error: 'Internal Server error' });
@@ -100,7 +100,7 @@ const getTrivialByDifficultyWithNumLimit = async (req, res) => {
     try {
         const { difficulty, num } = req.params;
         const result = await trivial.getTrivialByDifficultyWithNumLimit(difficulty, num);
-        res.status(200).send({ trivialByDifficultyList: result });
+        res.status(200).send({ trivialList: result });
     } catch (e) {
         console.log(e);
         res.status(500).json({ error: 'Internal Server error' });
