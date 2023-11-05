@@ -55,7 +55,7 @@ const TrivialList = () => {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className="trivial-list">
+      <div className="trivial">
         <h1>Mi lista de trivial</h1>
         <div>
           <select value={selectedCategory} onChange={ (e)=> {
@@ -67,6 +67,7 @@ const TrivialList = () => {
             <option value="all"> Select a category</option>
             <option value="geography" >Geography</option>
             <option value="history">History</option>
+            <option value="sports">Sports</option>
           </select>
           <select value={selectedDifficulty} onChange={ (e)=> {
             if(e.target.value !== "all" && selectedCategory==="all") loadTrivialListByDifficulty(e.target.value) 
@@ -77,9 +78,10 @@ const TrivialList = () => {
             <option value="all"> Select a difficulty</option>
             <option value="easy" >Easy</option>
             <option value="medium">Medium</option>
+            <option value="high">High</option>
           </select>
         </div>
-        <div>
+        <div className="trivial-list">
           {trivialList.map((trivial) => (
             <div key={trivial._id} className="trivial-general">
               <p className="trivial-question"> {trivial.question} </p> 

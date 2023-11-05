@@ -6,12 +6,25 @@
   border: 0.25rem solid white;
   border-radius: 1rem;
   margin:1rem;
+  width: 20rem;
+  height: 45rem;
+}
+
+.trivial-question{
+  height: 7rem;
 }
 
 .trivial-info{
   border: 0.25rem solid white;
   border-radius: 1rem;
   margin:1rem;
+}
+
+.trivial-list{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
