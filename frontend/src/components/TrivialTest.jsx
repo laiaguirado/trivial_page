@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as api from "../api";
 import TrivialList from './TrivialList';
 
-const TrivialButtons = () => {
+const TrivialTest = () => {
   const [trivialList, setTrivialList] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedDifficulty, setSelectedDifficulty] = useState("all");
@@ -60,7 +60,7 @@ const TrivialButtons = () => {
   );
 };
 
-export default TrivialButtons;
+export default TrivialTest;
 
 
 
