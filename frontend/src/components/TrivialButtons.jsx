@@ -18,25 +18,6 @@ const TrivialButtons = () => {
     }
   };
 
-  const loadTrivialListByCategory = async (category) => {
-    setSelectedCategory(category);
-    const { trivialList } = await api.getTrivialListByCategory(category);
-    if (trivialList !== null) {
-      setTrivialList(trivialList.trivialList);
-    } else {
-      setTrivialList([]);
-    }
-  }
-
-  const loadTrivialListByDifficulty = async (difficulty) => {
-    setSelectedDifficulty(difficulty);
-    const { trivialList } = await api.getTrivialListByDifficulty(difficulty);
-    if (trivialList !== null) {
-      setTrivialList(trivialList.trivialList);
-    } else {
-      setTrivialList([]);
-    }
-  }
   const getTrivialListByCategoryAndDifficulty = async (category, difficulty) => {
     setSelectedCategory(category);
     setSelectedDifficulty(difficulty);
