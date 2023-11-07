@@ -26,7 +26,13 @@ const getAllTrivialByDifficulty = (difficulty) => {
 }
 
 const getAllTrivialByCategoryAndDifficulty = (category, difficulty) => {
-    return Trivial.find({ $and: [{ category, difficulty }] }).lean().exec();
+    if (category === "all") {
+        return Trivial.find({ difficulty }).lean().exec();
+    } else if (difficulty === "all") {
+        return Trivial.find({ category }).lean().exec();
+    } else {
+        return Trivial.find({ $and: [{ category, difficulty }] }).lean().exec();
+    }
 }
 
 const getTrivialByCategoryWithNumLimit = (category, num) => {
