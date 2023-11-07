@@ -10,7 +10,7 @@ const TrivialList = ({ trivialList }) => {
     return (
       <div className="trivial-list">
         {trivialList.map((trivial) => (
-          <Trivial trivial={trivial} />
+          <Trivial key={trivial._id} trivial={trivial} />
         ))}
       </div>
     );

@@ -4,8 +4,8 @@ import TrivialList from './TrivialList';
 
 const TrivialButtons = () => {
   const [trivialList, setTrivialList] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [selectedDifficulty, setSelectedDifficulty] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedDifficulty, setSelectedDifficulty] = useState("all");
 
   const loadTrivialList = async () => {
     setSelectedCategory("all");
