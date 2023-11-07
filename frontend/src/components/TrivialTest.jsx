@@ -36,6 +36,7 @@ const TrivialTest = () => {
   return (
     <div>
       <h1>Mi lista de trivial</h1>
+      {/*TODO: style select amb llibreria importada*/}
       <select value={selectedCategory} onChange={(e) => {
         (e.target.value === "all" && selectedDifficulty === "all") ? loadTrivialList() : getTrivialListByCategoryAndDifficulty(e.target.value, selectedDifficulty)
       }}>

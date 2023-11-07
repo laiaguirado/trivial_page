@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import "./App.css";
 import TrivialTest from "./components/TrivialTest";
 import TrivialGame from "./components/TrivialGame";
-import { themeIOS, theme } from "./utils/style"
+import { themeIOS } from "./utils/style"
 
 const IOSSwitch = styled((props) => (
   <Switch disableRipple {...props} />
