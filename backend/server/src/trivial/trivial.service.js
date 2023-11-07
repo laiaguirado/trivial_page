@@ -2,7 +2,7 @@
 const Trivial = require('./trivial.model');
 
 const getAllTrivial = () => {
-    return Trivial.find().lean().exec();
+    return Trivial.find().sort({ numQuestion: 1 }).lean().exec();
 }
 
 const getTrivial = (numQuestion) => {
