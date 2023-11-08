@@ -40,6 +40,29 @@
   align-items: center;
 }
 
+.trivial-game p{
+  margin:0rem;
+}
+
+.trivial-questionGame{
+  border: 0.25rem solid white;
+  border-radius: 1rem;
+  margin:1rem;
+  padding: 1rem;
+}
+
+.trivial-questionGame-answer, .trivial-questionGame-changeQuestion, .trivial-game-button{
+  margin:1rem;
+  padding: 1rem;
+  border: 0.2rem solid white;
+  border-radius: 0.5rem;
+}
+
+.trivial-questionGame-answer:hover, .trivial-questionGame-changeQuestion:hover, .trivial-game-button:hover{
+  background-color: #c7a1ed;
+  cursor: pointer;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
