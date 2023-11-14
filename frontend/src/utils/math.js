@@ -4,8 +4,6 @@ export const getRandomNum = (max) => {
 }
 
 export const getRandomNumAndSkipRepeat = (max, listOmitir) => {
-    console.log(listOmitir.length);
-    console.log(max)
     if (listOmitir.length === max + 1) {
         return 0;
     } else {

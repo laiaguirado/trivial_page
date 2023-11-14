@@ -45,22 +45,55 @@
 }
 
 .trivial-questionGame{
-  border: 0.25rem solid white;
-  border-radius: 1rem;
-  margin:1rem;
-  padding: 1rem;
-}
-
-.trivial-questionGame-answer, .trivial-questionGame-changeQuestion, .trivial-game-button{
   margin:1rem;
   padding: 1rem;
   border: 0.2rem solid white;
   border-radius: 0.5rem;
 }
 
-.trivial-questionGame-answer:hover, .trivial-questionGame-changeQuestion:hover, .trivial-game-button:hover{
+.trivial-questionGame-answers{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.trivial-questionGame-answer, .trivial-questionGame-changeQuestion, .trivial-game-button, .trivial-questionGame-checkAnswer, .trivial-questionGame-nextQuestion{
+  margin:1rem;
+  padding: 1rem;
+  border: 0.2rem solid white;
+  border-radius: 0.5rem;
+}
+
+.trivial-questionGame-checkAnswer{
+  width: 11rem;
+}
+
+.trivial-questionGame-answer:hover, .trivial-questionGame-changeQuestion:hover, .trivial-game-button:hover, .trivial-questionGame-checkAnswer:hover, .trivial-questionGame-nextQuestion:hover{
   background-color: #c7a1ed;
   cursor: pointer;
+}
+
+.trivial-questionGame-answer-check{
+  cursor: auto;
+  margin:1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.trivial-game-evolution{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.trivial-game-evolution-question{
+  color: white;
+  margin:0.5rem;
+  padding: 1rem;
+  border: 0.13rem solid white;
+  border-radius: 0.5rem;
 }
 
 .App-header {
