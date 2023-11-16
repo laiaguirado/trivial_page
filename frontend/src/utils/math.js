@@ -4,7 +4,7 @@ export const getRandomNum = (max) => {
 }
 
 export const getRandomNumAndSkipRepeat = (max, listOmitir) => {
-    if (listOmitir.length === max + 1) {
+    if (listOmitir.length === max) {
         return 0;
     } else {
         let random = getRandomNum(max);
