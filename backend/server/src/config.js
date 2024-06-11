@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 
 const envVarNames = [
@@ -18,7 +17,9 @@ const envVarAtlasNames = [
   "NODE_ENV",
   "FRONTEND_DIR",
   "SERVER_PORT",
-  "DB_ATLAS_PASSWORD"
+  "DB_ATLAS_PASSWORD",
+  "DB_ATLAS_USER",
+  "DB_ATLAS_URL"
 ];
 
 
@@ -37,8 +38,8 @@ const getMongoURL = () => {
 }
 
 const getMongoAtlasUrl = () => {
-  const { DB_ATLAS_PASSWORD } = envVars;
-  return `mongodb+srv://laiaguirado:${DB_ATLAS_PASSWORD}@cluster0.rtlkk76.mongodb.net/?retryWrites=true&w=majority`;
+  const { DB_ATLAS_PASSWORD, DB_ATLAS_USER, DB_ATLAS_URL } = envVars;
+  return `mongodb+srv://${DB_ATLAS_USER}:${DB_ATLAS_PASSWORD}@${DB_ATLAS_URL}/?retryWrites=true&w=majority`;
 }
 
 module.exports = {
