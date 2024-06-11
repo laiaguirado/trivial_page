@@ -4,7 +4,10 @@ const config = require('./config');
 
 const connect = async () => {
   try {
-    await mongoose.connect(config.MONGO_URL);
+    let localUrl = config.MONGO_URL;
+    //await mongoose.connect(localUrl);
+    let dataBaseUrl = config.MONGO_ATLAS_URL;
+    await mongoose.connect(dataBaseUrl);
     console.log("Mongoose connected");
   } catch (e) {
     console.error(`Could not connect to MongoDB: ${e}`);
