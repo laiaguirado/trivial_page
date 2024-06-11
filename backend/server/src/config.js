@@ -1,4 +1,6 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
+//require('dotenv').config();
 
 const envVarNames = [
   "NODE_ENV",
@@ -42,7 +44,8 @@ const getMongoAtlasUrl = () => {
   return `mongodb+srv://${DB_ATLAS_USER}:${DB_ATLAS_PASSWORD}@${DB_ATLAS_URL}/?retryWrites=true&w=majority`;
 }
 
-module.exports = {
+//module.exports = {
+export default {
   ...envVars,
   isDevelopment: process.env.NODE_ENV === "development",
   //MONGO_URL: getMongoURL(),

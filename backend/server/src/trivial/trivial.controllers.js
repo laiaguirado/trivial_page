@@ -1,4 +1,9 @@
-const trivial = require("./trivial.service");
+import trivial from "./trivial.service.js"
+//const trivial = require("./trivial.service");
+
+const getBasic = async (req, res) => {
+    res.status(500).json({ trivial: 'Trivial API' });
+}
 
 const getAllTrivial = async (req, res) => {
     try {
@@ -109,6 +114,7 @@ const getTrivialByDifficultyWithNumLimit = async (req, res) => {
 }
 
 const addRoutesTo = (app) => {
+    app.get("/", getBasic);
     app.get("/trivials", getAllTrivial);
     app.get("/trivial/:numQuestion", getTrivial);
     app.post("/trivial", createTrivial);
@@ -120,6 +126,5 @@ const addRoutesTo = (app) => {
     app.get("/trivials/difficulty/:difficulty/:num", getTrivialByDifficultyWithNumLimit);
 };
 
-module.exports = {
-    addRoutesTo,
-};
+//module.exports = { addRoutesTo,};
+export default { addRoutesTo }

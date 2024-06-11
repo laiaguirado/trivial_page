@@ -1,6 +1,7 @@
-
-const mongoose = require('mongoose');
-const config = require('./config');
+import mongoose from 'mongoose';
+import config from "./config.js"
+//const mongoose = require('mongoose');
+//const config = require('./config');
 
 const connect = async () => {
   try {
@@ -18,7 +19,8 @@ const disconnect = async () => {
   return mongoose.connection.close();
 }
 
-module.exports = {
+/*module.exports = {
   connect,
   disconnect,
-}
+}*/
+export default { connect, disconnect }
